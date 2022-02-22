@@ -1,11 +1,14 @@
 static bool IsMissionClient()
 {
-	Print("Call to IsMissionClient() - legacy CF code, please remove.");
-	Print("This is advisory only, NOT an error.");
+	if (IsCLIParam("cfwarn"))
+	{
+		Print("Call to IsMissionClient() - legacy CF code, please remove.");
+		Print("This is advisory only, NOT an error.");
 
-	string dump;
-	DumpStackString(dump);
-	Print("Source: " + dump);
+		string dump;
+		DumpStackString(dump);
+		Print("Source: " + dump);
+	}
 	
 	if (!GetGame() || GetGame().IsDedicatedServer())
 		return false;
@@ -15,13 +18,16 @@ static bool IsMissionClient()
 
 static bool IsMissionHost()
 {
-	Print("Call to IsMissionHost() - legacy CF code, please remove.");
-	Print("This is advisory only, NOT an error.");
+	if (IsCLIParam("cfwarn"))
+	{
+		Print("Call to IsMissionHost() - legacy CF code, please remove.");
+		Print("This is advisory only, NOT an error.");
 
-	string dump;
-	DumpStackString(dump);
-	Print("Source: " + dump);
-
+		string dump;
+		DumpStackString(dump);
+		Print("Source: " + dump);
+	}
+	
 	if (!GetGame())
 		return false;
 
@@ -33,13 +39,16 @@ static bool IsMissionHost()
 
 static bool IsMissionOffline()
 {
-	Print("Call to IsMissionOffline() - legacy CF code, please remove.");
-	Print("This is advisory only, NOT an error.");
+	if (IsCLIParam("cfwarn"))
+	{
+		Print("Call to IsMissionOffline() - legacy CF code, please remove.");
+		Print("This is advisory only, NOT an error.");
 
-	string dump;
-	DumpStackString(dump);
-	Print("Source: " + dump);
-
+		string dump;
+		DumpStackString(dump);
+		Print("Source: " + dump);
+	}
+	
 	if (!GetGame())
 		return false;
 
