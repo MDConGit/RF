@@ -12,7 +12,7 @@ As the scope of CF has increased over time, recent updates have had a negative e
 
 Reliance on the existence and maintenance of a mod to this extent is distasteful for many server owners, thus the creation of RF.
 
-###Differences
+### Differences
 
 - RF does not handle single player environments gracefully. For single player support, I would reccommend utilizing alternative methods to RPCs for passing data between objects. As the majority of DayZ players spend their time in a multiplayer environment, this was considered a worthwhile tradeoff for simplicity and performance reasons.
 - `RPCManager::SendRPCs` is not a provided interface. I couldn't find any examples of it being utilized in popular 3rd party mods, and no documentation existed for it, therefore it was excluded as legacy.
