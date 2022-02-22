@@ -32,6 +32,7 @@ bool RegisterRPC(string modName, string functionName, string password, Class tar
 void SendSecureRPC(string modName, string functionName, string password, Param params = NULL, bool guaranteed = false, PlayerIdentity recipient = NULL, Object target = NULL);
 ```
 *Sends an RPC to an optional recipient. Omitting or specifying recipient as `NULL` will direct the RPC to the server when executed on client, or to all clients when executed on server*
+
 ```csharp
 bool SetPassword(string modName, string password);
 ```
@@ -43,9 +44,11 @@ bool SetPassword(string modName, string functionName, string password);
 
 Additionally, the following legacy methods are provided for compatibility with CF:
 ```csharp
-bool AddRPC(string modName, string functionName, Class targetClass, int executionScope = SingleplayerExecutionType.Server, string password = "");```
+bool AddRPC(string modName, string functionName, Class targetClass, int executionScope = SingleplayerExecutionType.Server, string password = "");
+```
 ```csharp
-void SendRPC(string modName, string functionName, Param params = NULL, bool guaranteed = false, PlayerIdentity recipient = NULL, Object target = NULL);```
+void SendRPC(string modName, string functionName, Param params = NULL, bool guaranteed = false, PlayerIdentity recipient = NULL, Object target = NULL);
+```
 
 ### Logging
 
