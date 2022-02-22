@@ -60,4 +60,8 @@ This will log any invalid secure RPCs with missing or invalid passwords. `-dorpc
 
 ### Other Notes
 
-The static methods `IsMissionClient`, `IsMissionHost` and `IsMissionOffline` are also provided by RF for legacy purposes, as they are commonly utilized in RPC-called methods in existing mods and examples. I would advise using the officially provided methods of `IsClient`, `IsDedicatedServer`, and `IsServer`, in conjunction with `IsMultiplayer`. Warnings on use of the three legacy methods can be enabled with the CLI parameter `-cfwarn`.
+The static methods `IsMissionClient`, `IsMissionHost` and `IsMissionOffline` are also provided by RF for legacy purposes, as they are commonly utilized in RPC-called methods in existing mods and examples. 
+
+I would advise using the officially provided methods of `IsClient`, `IsDedicatedServer`, and `IsServer`, in conjunction with `IsMultiplayer`. 
+
+Warnings on use of the three legacy methods can be enabled with the CLI parameter `-cfwarn`.
